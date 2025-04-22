@@ -2,6 +2,8 @@ import { NavItem } from "@/components/nav/nav-item";
 import { NavLogout } from "@/components/nav/nav-logout";
 import { NavMyProfile } from "@/components/nav/nav-myprofile";
 import { Logo } from "@/components/ui/logo";
+import { SearchField } from "@/components/ui/SearchField";
+import { RecentTopicsContainer } from "@/components/ui/RecentTopicsContainer/RecentTopicsContainer";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +14,7 @@ type Props = {
 const Layout = (props: Props) => {
   return (
     <main className="min-h-screen flex justify-center mx-auto max-w-7xl">
-       <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 border-r-2 border-gray-900">
+      <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-900">
         <div className="flex-1 mt-6">
           <Logo size={24} />
           <nav className="mt-11">
@@ -26,8 +28,9 @@ const Layout = (props: Props) => {
         </div>
       </section>
       <section className="flex-1 max-w-lg">{props.children}</section>
-      <aside className="hidden lg:flex flex-col gap-6 sticky top-0 h-fit w-96 py-6 border-l-2 border-gray-900">
-        ...
+      <aside className="hidden lg:flex flex-col gap-6 sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900">
+        <SearchField toggleVisibility />
+        <RecentTopicsContainer />
       </aside>
     </main>
   );

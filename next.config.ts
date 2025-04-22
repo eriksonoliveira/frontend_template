@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
         hostname: "ui-avatars.com",
         port: "",
         pathname: "/api/**",
-        search: "?background=random&name=Bonieky&size=100",
       },
     ],
     dangerouslyAllowSVG: true,

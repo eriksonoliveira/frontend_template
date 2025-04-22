@@ -1,6 +1,11 @@
 "use client";
 
-import { ChangeEvent, useCallback, useState } from "react";
+import React, {
+  ChangeEvent,
+  KeyboardEvent,
+  useCallback,
+  useState,
+} from "react";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
@@ -12,6 +17,7 @@ type Props = {
   filled?: boolean;
   icon?: IconDefinition;
   onChange?: (newValue: string) => void;
+  onEnter?: () => void;
 };
 
 const Input = (props: Props) => {
@@ -20,6 +26,12 @@ const Input = (props: Props) => {
   const togglePasswordVisibility = useCallback(() => {
     setShowPassword(!showPassword);
   }, [showPassword]);
+
+  const handleEnterKey = (event: KeyboardEvent) => {
+    if (event.key == "Enter" && props.onEnter) {
+      props.onEnter();
+    }
+  };
 
   return (
     <div
@@ -41,6 +53,7 @@ const Input = (props: Props) => {
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           props.onChange && props.onChange(e.target.value)
         }
+        onKeyUp={handleEnterKey}
       />
       {props.password && (
         <FontAwesomeIcon
