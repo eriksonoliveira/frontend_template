@@ -1,5 +1,3 @@
-// import Image from "next/image";
-
 import { user } from "@/data/user";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +17,9 @@ const NavMyProfile = () => {
         </Link>
       </div>
       <div className="flex-1 overflow-hidden">
-        <Link href={`${user.slug}`} className="block truncate">{user.name}</Link>
+        <Link href={`${user.slug}`} className="block truncate">
+          {user.name}
+        </Link>
         <div className="text-sm text-gray-400 truncate">@{user.slug}</div>
       </div>
     </div>

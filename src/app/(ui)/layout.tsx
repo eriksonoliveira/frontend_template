@@ -6,6 +6,7 @@ import { SearchField } from "@/components/ui/SearchField";
 import { RecentTopicsContainer } from "@/components/ui/RecentTopicsContainer/RecentTopicsContainer";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { SecondaryPanelArea } from "@/components/ui/SecondaryPanelArea/SecondaryPanelArea";
 
 type Props = {
   children: React.ReactNode;
@@ -31,6 +32,7 @@ const Layout = (props: Props) => {
       <aside className="hidden lg:flex flex-col gap-6 sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900">
         <SearchField toggleVisibility />
         <RecentTopicsContainer />
+        <SecondaryPanelArea />
       </aside>
     </main>
   );
