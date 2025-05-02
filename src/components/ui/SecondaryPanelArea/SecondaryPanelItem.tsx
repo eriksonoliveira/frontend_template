@@ -18,7 +18,7 @@ const getFakeAvatarURL = (userName: string) => {
   return `https://ui-avatars.com/api/?name=${nameParam}&background=0D8ABC&color=fff&size=100`;
 };
 
-const TopicItem = (props: Props) => {
+const UserItem = (props: Props) => {
   const [following, setFollowing] = useState(false);
   const onButtonPressed = useCallback(() => {
     setFollowing(true);
@@ -43,8 +43,8 @@ const TopicItem = (props: Props) => {
           {props.user.name}
         </Link>
         <div className="truncate text-sm text-gray-400">
-          {/* @ts-expect-error - mock data has username instead of slug */}
-          @{props.user.username}
+          {/* @ts-expect-error - mock data has username instead of slug */}@
+          {props.user.username}
         </div>
       </div>
       <div className="w-20 pl-2">
@@ -60,16 +60,4 @@ const TopicItem = (props: Props) => {
   );
 };
 
-const TopicItemLoader = () => {
-  return (
-    <div className="flex flex-row items-center animate-pulse">
-      <div className="size-10 rounded-full overflow-hidden bg-gray-600 mr-2"></div>
-      <div className="flex-1 gap-1 flex flex-col">
-        <div className="bg-gray-600 h-4 w-3/4"></div>
-        <div className="bg-gray-600 h-4 w-1/4"></div>
-      </div>
-    </div>
-  );
-};
-
-export { TopicItem, TopicItemLoader };
+export { UserItem };
