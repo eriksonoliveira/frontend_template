@@ -21,8 +21,6 @@ import { RecentTopicsContent } from "./RecentTopicsContent";
 import { ContentFallback } from "./ContentFallback";
 
 const RecentTopicsContainer = async () => {
-  // const topics = await fetchRecentTopics();
-
   return (
     <div className="bg-gray-700 rounded-3xl">
       <h2 className="text-xl p-6">{"What's happening"}</h2>
@@ -36,4 +34,3 @@ const RecentTopicsContainer = async () => {
 };
 
 export { RecentTopicsContainer };
-// export const dynamic = "force-dynamic";

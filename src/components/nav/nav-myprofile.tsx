@@ -5,17 +5,15 @@ import Link from "next/link";
 const NavMyProfile = () => {
   return (
     <div className="flex flex-row items-center">
-      <div className="size-10 mr-2 rounded-full overflow-hidden">
-        <Link href={`/${user.slug}`}>
-          <Image
-            src={user.avatar}
-            alt="profile picture"
-            className="size-full"
-            width={40}
-            height={40}
-          />
-        </Link>
-      </div>
+      <Link href={`/${user.slug}`}>
+        <Image
+          src={user.avatar}
+          alt="profile picture"
+          className="size-10 mr-2 rounded-full overflow-hidden"
+          width={40}
+          height={40}
+        />
+      </Link>
       <div className="flex-1 overflow-hidden">
         <Link href={`${user.slug}`} className="block truncate">
           {user.name}
