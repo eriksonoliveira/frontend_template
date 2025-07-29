@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { PostItemIcons } from "./PostItemIcons";
+import { formatTime } from "@/utilities/timeFormatter";
 
 import type { Post } from "../../types/post";
 
@@ -30,8 +31,9 @@ const PostItem = (props: Props) => {
               {props.post.author.name}
             </Link>
           </div>
-          <div className="text-xs text-gray-500">@{props.post.author.slug}</div>
-          <div>date</div>
+          <div className="text-xs text-gray-500">
+            @{props.post.author.slug} - {formatTime(props.post.createdAt)}
+          </div>
         </div>
         <div className="py-4 text-lg">{props.post.body}</div>
         {props.post.image && (

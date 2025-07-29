@@ -9,7 +9,7 @@ const mockPosts: Post[] = [
     liked: false,
     shahared: false,
     image: "https://img.freepik.com/free-photo/beautiful-view-sunset-sea_23-2148019892.jpg",
-    createdAt: new Date(),
+    createdAt: new Date(2025, 0, 10),
     author: {
       slug: "erikson",
       name: "Erikson Oliveira",
@@ -27,7 +27,7 @@ const mockPosts: Post[] = [
     liked: true,
     shahared: false,
     image: "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
-    createdAt: new Date(),
+    createdAt: new Date(Date.now() - 120000),
     author: {
       slug: "erikson",
       name: "Erikson Oliveira",
