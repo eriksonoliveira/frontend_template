@@ -1,4 +1,4 @@
-import { Logo } from "@/components/ui/logo";
+import { Logo } from "@/components/logo";
 import { redirect } from "next/navigation";
 
 function Page() {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { SignupForm } from "@/components/auth/signup-form";
-import { Logo } from "@/components/ui/logo";
+import { Logo } from "@/components/logo";
 
 export default function Page() {
   return (

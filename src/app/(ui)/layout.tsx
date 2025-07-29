@@ -1,12 +1,12 @@
 import { NavItem } from "@/components/nav/nav-item";
 import { NavLogout } from "@/components/nav/nav-logout";
 import { NavMyProfile } from "@/components/nav/nav-myprofile";
-import { Logo } from "@/components/ui/logo";
-import { SearchField } from "@/components/ui/SearchField";
-import { RecentTopicsContainer } from "@/components/ui/RecentTopicsContainer/RecentTopicsContainer";
+import { Logo } from "@/components/logo";
+import { SearchField } from "@/components/SearchField";
+import { RecentTopicsContainer } from "@/components/RecentTopicsContainer/RecentTopicsContainer";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { SecondaryPanelArea } from "@/components/ui/SecondaryPanelArea/SecondaryPanelArea";
+import { SecondaryPanelArea } from "@/components/SecondaryPanelArea/SecondaryPanelArea";
 
 type Props = {
   children: React.ReactNode;

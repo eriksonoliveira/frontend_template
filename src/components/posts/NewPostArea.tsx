@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
 
 import { user } from "@/data/user";
-import { Button, BUTTON_SIZE } from "../ui/Button";
+import { Button, BUTTON_SIZE } from "../Button";
 
 const NewPostArea = () => {
   const textAreaRef = React.useRef<HTMLDivElement>(null);

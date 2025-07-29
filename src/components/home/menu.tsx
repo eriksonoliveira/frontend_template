@@ -1,8 +1,8 @@
 import { faHouse, faUser, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Logo } from "../ui/logo";
-import { SearchField } from "../ui/SearchField";
+import { Logo } from "../logo";
+import { SearchField } from "../SearchField";
 import { NavItem } from "../nav/nav-item";
 import { NavLogout } from "../nav/nav-logout";
 

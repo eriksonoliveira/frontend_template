@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { Input } from "../ui/Input";
-import { Button, BUTTON_SIZE } from "../ui/Button";
+import { Input } from "../Input";
+import { Button, BUTTON_SIZE } from "../Button";
 
 const SignupForm = () => {
   const router = useRouter();

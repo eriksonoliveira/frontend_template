@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import { Logo } from "../ui/logo";
+import { Logo } from "../logo";
 import { Menu } from "./menu";
 
 const Header = () => {
