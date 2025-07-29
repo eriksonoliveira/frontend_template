@@ -1,21 +1,12 @@
 import { User } from "@/types/user";
 import { UserItem } from "./SecondaryPanelItem";
-
-/**
- * Fetch mock data
- */
-const fetchUsers = async () => {
-  const data = await fetch(`${process.env.BASE_URL}users`, {
-    cache: "no-store",
-  });
-  const users: User[] = await data.json();
-  // Remove: force delay in response to show Suspense fallback
-  await new Promise((resolve) => setTimeout(() => resolve(null), 1000));
-  return users.slice(0, 3);
-};
+import { fetchData } from "@/data/fetchMockData";
 
 const SecondaryPanelContent = async () => {
-  const users = await fetchUsers();
+  /**
+   * Fetch mock data
+   */
+  const users = await fetchData<User>("users", 3);
   return (
     <>
       {users.map((item) => {

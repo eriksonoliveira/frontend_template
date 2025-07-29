@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/api/**",
       },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+        port: "",
+        pathname: "/free-photo/**",
+      },
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

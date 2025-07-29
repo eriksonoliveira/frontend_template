@@ -1,25 +1,16 @@
 import { TopicItem } from "./TopicItem";
+import { fetchData } from "@/data/fetchMockData";
 
-/**
- * Fetch mock data
- */
 type Topic = {
   id: number;
   title: string;
 };
 
-const fetchRecentTopics = async () => {
-  const data = await fetch(`${process.env.BASE_URL}posts`, {
-    cache: "no-store",
-  });
-  const topics: Topic[] = await data.json();
-  // Remove: force delay in response to show Suspense fallback
-  await new Promise((resolve) => setTimeout(() => resolve(null), 1000));
-  return topics.slice(0, 4);
-};
-
 const RecentTopicsContent = async () => {
-  const topics = await fetchRecentTopics();
+  /**
+   * Fetch mock data
+   */
+  const topics = await fetchData<Topic>("posts", 4);
 
   return (
     <>
