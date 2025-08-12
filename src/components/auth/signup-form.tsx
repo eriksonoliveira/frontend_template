@@ -40,24 +40,24 @@ const SignupForm = () => {
   return (
     <>
       <Input
-        placeholder="Digite seu nome de usuário"
+        placeholder="Create your user name"
         value={nameField}
         onChange={updateNameField}
       />
       <Input
-        placeholder="Digite seu email"
+        placeholder="E-mail"
         value={emailField}
         onChange={updateEmailField}
       />
       <Input
         password
-        placeholder="Digite sua senha"
+        placeholder="Password"
         value={passwordField}
         onChange={updatePasswordField}
       />
       <Button
         onClick={validateSignin}
-        label={"Entrar"}
+        label={"Sign up"}
         size={BUTTON_SIZE.LARGE}
       />
     </>

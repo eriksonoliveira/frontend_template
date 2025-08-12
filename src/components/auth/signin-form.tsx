@@ -31,17 +31,17 @@ const SigninForm = () => {
   return (
     <>
       <Input
-        placeholder="Digite seu email"
+        placeholder="E-mail"
         value={emailField}
         onChange={updateEmailField}
       />
       <Input
         password
-        placeholder="Digite sua senha"
+        placeholder="Password"
         value={passwordField}
         onChange={updatePasswordField}
       />
-      <Button onClick={validateSignin} label={"Entrar"} size={BUTTON_SIZE.LARGE}/>
+      <Button onClick={validateSignin} label={"Sign in"} size={BUTTON_SIZE.LARGE}/>
     </>
   );
 };
