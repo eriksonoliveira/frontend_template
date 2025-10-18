@@ -24,6 +24,8 @@ const Layout = (props: Props) => {
           </nav>
         </div>
         <div className="mb-6 flex flex-col gap-4">
+          // eslint-disable-next-line @next/next/no-html-link-for-pages
+          <a href="/auth/login">Log in</a>
           <NavLogout />
           <NavMyProfile />
         </div>
