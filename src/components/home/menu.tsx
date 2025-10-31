@@ -31,8 +31,8 @@ const Menu = (props: Props) => {
         <SearchField />
       </div>
       <div>
-        <NavItem href="/home" icon={faHouse} label="Página inicial" />
-        <NavItem href="/profile" icon={faUser} label="Meu perfil" />
+        <NavItem href="/home" icon={faHouse} label="Home" />
+        <NavItem href="/profile" icon={faUser} label="My profile" />
         <NavLogout />
       </div>
     </div>

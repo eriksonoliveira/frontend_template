@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import { Logo } from "../logo";
-import { Menu } from "./menu";
+import { Menu } from "./Menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

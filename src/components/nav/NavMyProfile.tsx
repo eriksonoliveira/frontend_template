@@ -1,6 +1,9 @@
-import { user } from "@/data/user";
 import Image from "next/image";
 import Link from "next/link";
+
+// TODO remove mock data
+import { user } from "@/data/user";
+import { UserName } from "../UserName/UserName";
 
 const NavMyProfile = () => {
   return (
@@ -16,7 +19,7 @@ const NavMyProfile = () => {
       </Link>
       <div className="flex-1 overflow-hidden">
         <Link href={`${user.slug}`} className="block truncate">
-          {user.name}
+          <UserName />
         </Link>
         <div className="text-sm text-gray-400 truncate">@{user.slug}</div>
       </div>
