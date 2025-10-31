@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Logo } from "../logo";
 import { SearchField } from "../SearchField";
-import { NavItem } from "../nav/nav-item";
-import { NavLogout } from "../nav/nav-logout";
+import { NavItem } from "../nav/NavItem";
+import { NavLogout } from "../nav/NavLogout";
 
 type Props = {
   setIsMenuOpen: (isOpen: boolean) => void;

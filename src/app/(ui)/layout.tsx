@@ -1,6 +1,6 @@
-import { NavItem } from "@/components/nav/nav-item";
-import { NavLogout } from "@/components/nav/nav-logout";
-import { NavMyProfile } from "@/components/nav/nav-myprofile";
+import { NavItem } from "@/components/nav/NavItem";
+import { NavLogout } from "@/components/nav/NavLogout";
+import { NavMyProfile } from "@/components/nav/NavMyProfile";
 import { Logo } from "@/components/logo";
 import { SearchField } from "@/components/SearchField";
 import { RecentTopicsContainer } from "@/components/RecentTopicsContainer/RecentTopicsContainer";
@@ -24,8 +24,6 @@ const Layout = (props: Props) => {
           </nav>
         </div>
         <div className="mb-6 flex flex-col gap-4">
-          // eslint-disable-next-line @next/next/no-html-link-for-pages
-          <a href="/auth/login">Log in</a>
           <NavLogout />
           <NavMyProfile />
         </div>
